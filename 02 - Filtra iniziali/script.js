@@ -4,9 +4,18 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 
 // Dichiara la funzione qui.
-
+function filterInitials(arr, initial) {
+  const filteredNames = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i][0].toLowerCase() === initial) {
+      filteredNames.push(arr[i]);
+    }
+  }
+  return filteredNames;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
+console.log(filterInitials(names, 'a'));
 
 
 
